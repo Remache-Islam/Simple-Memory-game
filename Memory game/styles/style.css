@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #3c5990;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.content{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 250px;
+}
+
+.game p{
+  font-size: 50px;
+  color: goldenrod;
+  transform: translateY(100px);
+  font-family: sans-serifs;
+  }
+
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  transform: translateX(222px);
+}
+
+ button{
+  border: solid 1px transparent;
+  padding:10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+  width: 70px;
+  box-shadow: 3px 3px 10px rgb(66, 61, 61);
+
+}
+
+
+
+#timer{
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px green;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgb(66, 61, 61);
+}
+
+ button:hover{
+  border: solid 1px white;
+  background-color: aqua;
+}
+
+
+.wrapper{
+    height:400px;
+    width: 400px;
+    padding: 25px;
+    background: #1d5c70;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(66, 61, 61);
+
+
+}
+
+.cards, .container-card,.card, .front-view, .back-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cards{
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+
+.back-view img{
+    width: 45px;
+}
+
+.front-view span{
+    font-family: sans-serif;
+    font-size: 40px;
+    color: rgb(56, 47, 140);
+}
+
+
+
+.container-card {
+    background-color: transparent;
+    width:77.5px;
+    height: 77.5px;
+    perspective: 1000px; 
+  }
+  
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 10px rgb(32, 26, 26);
+    border: solid 2px transparent;
+  }
+
+
+
+  
+
+  .container-card .card.flip {
+    transform: rotateY(180deg);
+  }
+
+  .container-card .card.shake {
+    border: solid 2px red;
+    /*animation: shake 0.35s ease-in-out;*/
+    }
+  
+  
+
+  .front-view, .back-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 7px;
+  }
+  
+
+  .front-view {
+    background-color:rgb(206, 212, 220);
+
+    
+  }
+  
+
+  .back-view {
+    background-color: rgb(255, 255, 255);
+    
+    transform: rotateY(180deg);
+  }
+
+  #timer{
+    background-color: #5f8ee5;
+  }
